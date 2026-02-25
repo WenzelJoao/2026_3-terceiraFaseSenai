@@ -1,4 +1,7 @@
+import Body from "./layouts/Body/Body"
+import Footer from "./layouts/footer/Footer"
 import Header from "./layouts/Header"
+
 
 
 function App() {
@@ -6,8 +9,14 @@ function App() {
 
   return (
     <>
-      
-      <Header/>
+      <Header title= "Nome do site"/>    
+
+      <Body/> 
+
+      <Footer/>
+
+     
+
     </>
   )
 }
