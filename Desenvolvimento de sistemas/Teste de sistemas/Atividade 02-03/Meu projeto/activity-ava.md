@@ -85,9 +85,9 @@ Servidor rodando na porta 3000.
 
 | ID     | Requisito           | Descrição                                                                 |
 |--------|--------------------|---------------------------------------------------------------------------|
-| RF-01  |  |  |
-| RF-02  |    |                            |
-| RF-03  |   |                      |
+| RF-01  | Criar usuário válido | Permitir criar um usuário com name e age válidos; definir isActive como true e roles como ["user"]. |
+| RF-02  |  Validar campo name  |             Não permitir criar usuário se o campo name estiver vazio ou ausente; lançar erro "O nome do usuário é obrigatório.".               |
+| RF-03  | Validar idade mínima  |          Não permitir criar usuário menor de idade (idade < 18); lançar erro "O usuário deve ser maior de idade.".            |
 
 ---
 
@@ -97,9 +97,9 @@ Servidor rodando na porta 3000.
 
 | ID Caso | ID Requisito | Descrição                                              | Precondição                  | Passos                                                                 | Resultado Esperado                                                                 |
 |---------|-------------|--------------------------------------------------------|------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| CT-01   | RF-01      |     |   |    |  |
-| CT-02   | RF-02      | |  |  |  |
-| CT-03   | RF-03      |  |   |   |                            |
+| CT-01   | RF-01      |  Criar usuário válido   |  Nenhuma |  1. Chamar createUser({ name: "João", age: 22 })  | Usuário criado com name: "João", age: 22, isActive: true, roles: ["user"]. |
+| CT-02   | RF-02      |Validar campo name  | Nenhuma | 1. Chamar createUser({ age: 25 }) | Lança erro "O nome do usuário é obrigatório.". |
+| CT-03   | RF-03      | Validar idade mínima |  Nenhuma |  1. Chamar createUser({ name: "João", age: 17 }) |         Lança erro "O usuário deve ser maior de idade.".                   |
 
 ---
 
