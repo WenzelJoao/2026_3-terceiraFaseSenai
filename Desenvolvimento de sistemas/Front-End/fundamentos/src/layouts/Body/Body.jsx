@@ -1,4 +1,5 @@
 import Card from '../../components/Card/Card'
+import CardApi from '../../components/Card/CardApi'
 import style from './Body.module.css'
 
 const Body = () => {
@@ -25,6 +26,9 @@ const Body = () => {
             />
           ))}
         </div>
+
+        <h3>Usuários vindos da API</h3>
+        <CardApi/>
       </main>
     </>
   )
