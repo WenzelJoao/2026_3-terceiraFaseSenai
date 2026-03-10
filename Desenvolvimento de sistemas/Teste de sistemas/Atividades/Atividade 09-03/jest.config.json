@@ -1,8 +1,0 @@
-"jest" : {
-   ..., 
-  "repórteres" : [
-     " padrão " ,
-     " jest-html-reporters "
-  ],
-  ...
-}
