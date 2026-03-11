@@ -16,14 +16,24 @@ const CardApi = () => {
     const [users, setUsers] = useState([])
 
     const [filtro, setFiltro] = useState('')
+    // const [filtroIdade, setFiltro] = useState('')
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
-            .then(res => res.json(res))
-            .then(data => setUsers(data))
+            .then(res => res.json())
+            .then(data => {
+                const filtrados = data.filter((user) => {
+                    return user.name
+                        .toLowerCase()
+                        .includes(filtro.toLocaleLowerCase())
+                })
+
+                setUsers(filtrados)
 
 
-    }, [])
+            })
+
+    }, [filtro])
 
 
 
@@ -31,7 +41,7 @@ const CardApi = () => {
         <>
 
             <input type="text"
-            className={styles.input}
+                className={styles.input}
                 value={filtro}
                 onChange={(e) => setFiltro(e.target.value)}
                 placeholder='Filtro por nome'
@@ -41,7 +51,7 @@ const CardApi = () => {
                 {
                     users.map((user) => (
                         <div className={styles.card} key={user.id}>
-                            <h2>{user.name}</h2>
+                            <h2>{user.name}</h2>-
                             <p>{user.email}</p>
                             <p>{user.address.street}</p>
                             <p>{user.address.geo.lat}</p>
