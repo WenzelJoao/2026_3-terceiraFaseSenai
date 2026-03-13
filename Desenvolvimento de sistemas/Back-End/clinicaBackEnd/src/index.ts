@@ -11,6 +11,12 @@ app.get('/', (requisicao, resposta)=>{
     resposta.send("Hello word")
 })
 
+// Endpoints usuarios 
+
+app.get('/usuarios', (req, res) =>{
+
+})
+
 app.listen(port, ()=>{
     console.log("Servidor esta de pé :)");
     

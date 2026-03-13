@@ -1,0 +1,17 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "sla",
+  "steps": [
+    {
+      "file": "prisma/schema.prisma",
+      "description": "Tipo de banco (\"Postgree\")",
+      "line": 12
+    },
+    {
+      "file": "prisma/schema.prisma",
+      "description": "Tabela exame do banco ",
+      "line": 16
+    }
+  ],
+  "ref": "main"
+}
