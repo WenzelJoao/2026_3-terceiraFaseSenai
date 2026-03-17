@@ -8,17 +8,18 @@ import { RouterProvider } from "react-router/dom";
 import Home from './pages/Home/Index';
 import Sobre from './pages/Sobre/Index';
 import Main from './layouts/Main/Index';
+import { AuthProvider } from './context/AuthContext';
 
 const router = createBrowserRouter([
 
   {
-    element:<Main/>,
-    children:[
+    element: <Main />,
+    children: [
       {
-        path:"/", element:<Home/>
+        path: "/", element: <Home />
       },
       {
-        path:"sobre", element:<Sobre/>
+        path: "sobre", element: <Sobre />
       }
     ]
   }
@@ -34,7 +35,14 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <RouterProvider router={router} />
-    {/* <App /> */}
+
+    <AuthProvider>
+
+      <RouterProvider router={router} />
+
+    </AuthProvider>
+
+
+
   </StrictMode>,
 )
