@@ -10,6 +10,7 @@ import Sobre from './pages/Sobre/Index';
 import Main from './layouts/Main/Index';
 import { AuthProvider } from './context/AuthContext';
 import Login from './pages/Login';
+import Blog from './pages/Blog/Index';
 
 const router = createBrowserRouter([
 
@@ -21,6 +22,9 @@ const router = createBrowserRouter([
       },
       {
         path: "sobre", element: <Sobre />
+      },
+      {
+        path: "blog", element: <Blog />
       }
     ]
   },
