@@ -9,6 +9,7 @@ import Home from './pages/Home/Index';
 import Sobre from './pages/Sobre/Index';
 import Main from './layouts/Main/Index';
 import { AuthProvider } from './context/AuthContext';
+import Login from './pages/Login';
 
 const router = createBrowserRouter([
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
         path: "sobre", element: <Sobre />
       }
     ]
+  },
+
+  {
+    path: "login", element: <Login />
   }
   // {
   //   path: "/",
