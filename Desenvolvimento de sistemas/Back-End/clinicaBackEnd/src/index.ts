@@ -30,7 +30,7 @@ app.get('/usuarios/:id', async (req, res) => {
   return res.status(200).json(usuario);
 })
 
-app.post("/usuarios", async (req, res) => {
+app.post("/cadastro", async (req, res) => {
   console.log(req.body)
   const dadosUsuario = req.body as Usuario
 
@@ -46,6 +46,38 @@ app.post("/usuarios", async (req, res) => {
 
   })
   return res.status(201).json(usuarioCriado)
+})
+
+app.post("/login", async (req, res) => {
+  console.log(req.body)
+  const dadosUsuario = req.body as Usuario
+  try {
+    const usuario = await prisma.usuario.findUnique({
+      where: {
+        email: dadosUsuario.email
+      }
+    })
+    if(!usuario){
+      return res.status(404).json({mensagem: "Usuário não encontrado"})
+    }
+    const senhaCorreta = await bcrypt.compare(
+      dadosUsuario.senha,
+      usuario.senha
+    )
+    if(!senhaCorreta){
+      return res.status(401).json({mensagem: "Senha Inválida"})
+    }
+
+    return res.status(200).json({
+      mensagem:"LOgin realizado com sucesso",
+      usuario: {
+        email:usuario.email,
+      }
+    })
+  } catch (erro) {
+    return res.status(500).json({erro: "Erro no servidor"})
+  }
+
 })
 
 app.put("/usuarios/:id", async (req, res) => {
