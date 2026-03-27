@@ -24,7 +24,7 @@
   },
   "include": [
     "src/**/*.ts"
- , "hash.ts"  ],
+  ],
   "exclude": [
     "node_modules"
   ]
