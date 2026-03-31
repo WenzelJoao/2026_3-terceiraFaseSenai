@@ -11,6 +11,7 @@ import Main from './layouts/Main/Index';
 import { AuthProvider } from './context/AuthContext';
 import Login from './pages/Login';
 import Blog from './pages/Blog/Index';
+import PostDetail from './pages/Blog/PostDetail';
 
 const router = createBrowserRouter([
 
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
       },
       {
         path: "blog", element: <Blog />
+      },
+      {
+        path: "post/:id", element: <PostDetail />
       }
+      
     ]
   },
 
