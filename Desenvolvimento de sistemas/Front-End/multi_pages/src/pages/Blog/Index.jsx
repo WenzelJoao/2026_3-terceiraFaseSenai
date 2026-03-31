@@ -23,7 +23,6 @@ const Blog = () => {
                             <h2>{post.title}</h2>
                             <p>{post.views}</p>
                             <p>{post.description}</p>
-                            {/* <a href="#">Leia mais</a> */}
                             <Link to={`/post/${post.id}`} className='text-white 
                             bg-blue-500 hover:bg-blue-700'>
                                 Ver mais
