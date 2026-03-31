@@ -14,7 +14,7 @@ const Blog = () => {
 
     return (
         <>
-            <div className='flex-gap-2'>
+            <div className='flex gap-2 pt-5'>
                 {
                     posts.map(post => (
                         <div key={post.id} className='card'>
@@ -22,6 +22,7 @@ const Blog = () => {
                             <h2>{post.title}</h2>
                             <p>{post.views}</p>
                             <p>{post.description}</p>
+                            <a href="#">Leia mais</a>
                         </div>
                     )
                     )
