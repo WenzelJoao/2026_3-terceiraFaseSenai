@@ -46,6 +46,16 @@ const Header = () => {
         >
           Blog
         </NavLink>
+
+        <NavLink
+          to="/authors"
+          end
+          className={({ isActive }) =>
+            isActive ? 'text-blue-600 font-bold' : 'text-gray-800'
+          }
+        >
+          Autores
+        </NavLink>
       </nav>
 
       <div>

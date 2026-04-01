@@ -27,7 +27,7 @@ const Blog = () => {
                             bg-blue-500 hover:bg-blue-700'>
                                 Ver mais
                             </Link>
-                            <h1>oi</h1>
+                            
                         </div>
                     )
                     )

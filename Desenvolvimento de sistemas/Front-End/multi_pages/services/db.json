@@ -62,5 +62,52 @@
       "name": "Maria",
       "idade": "24"
     }
+  ],
+  "authors": [
+    {
+      "id": "1",
+      "nome": "Machado de Assis",
+     "foto": "https://placehold.co/300x200",
+     "descricao": "Escritor brasileiro, considerado um dos maiores nomes da literatura nacional.",
+     "biografia": "Machado de Assis foi romancista, cronista, dramaturgo e poeta...",
+     "especialidade": "Literatura Brasileira",
+     "cidade": "Rio de Janeiro"
+    },
+      {
+    "id": "2",
+    "nome": "Clarice Lispector",
+    "foto": "https://placehold.co/300x200",
+    "descricao": "Escritora modernista brasileira, conhecida por sua escrita introspectiva.",
+    "biografia": "Clarice Lispector nasceu na Ucrânia e se mudou para o Brasil ainda bebê...",
+    "especialidade": "Romance e Conto",
+    "cidade": "Recife"
+  },
+  {
+    "id": "3",
+    "nome": "Jorge Amado",
+    "foto": "https://placehold.co/300x200",
+    "descricao": "Romancista brasileiro famoso por obras ambientadas na Bahia.",
+    "biografia": "Jorge Amado explorou temas sociais e culturais da vida baiana em seus livros...",
+    "especialidade": "Romance Regionalista",
+    "cidade": "Itabuna"
+  },
+  {
+    "id": "4",
+    "nome": "Graciliano Ramos",
+    "foto": "https://placehold.co/300x200",
+    "descricao": "Um dos maiores romancistas brasileiros do século XX.",
+    "biografia": "Graciliano Ramos retratou a vida no Nordeste com realismo e crítica social...",
+    "especialidade": "Romance Social",
+    "cidade": "Quebrangulo"
+  },
+  {
+    "id": "5",
+    "nome": "Cecília Meireles",
+    "foto": "https://placehold.co/300x200",
+    "descricao": "Poetisa e escritora brasileira, referência na literatura infantil e moderna.",
+    "biografia": "Cecília Meireles destacou-se pela musicalidade e profundidade poética...",
+    "especialidade": "Poesia e Literatura Infantil",
+    "cidade": "Rio de Janeiro"
+  }
   ]
 }

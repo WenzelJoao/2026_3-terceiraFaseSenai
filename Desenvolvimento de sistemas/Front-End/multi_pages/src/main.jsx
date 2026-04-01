@@ -12,6 +12,8 @@ import { AuthProvider } from './context/AuthContext';
 import Login from './pages/Login';
 import Blog from './pages/Blog/Index';
 import PostDetail from './pages/Blog/PostDetail';
+import Authors from './pages/Autores';
+import AuthorsDetail from './pages/Autores/AuthorsDetail';
 
 const router = createBrowserRouter([
 
@@ -29,6 +31,12 @@ const router = createBrowserRouter([
       },
       {
         path: "post/:id", element: <PostDetail />
+      },
+      {
+        path: "authors", element: <Authors />
+      },
+      {
+        path: "autores/:id", element: <AuthorsDetail />
       }
       
     ]
