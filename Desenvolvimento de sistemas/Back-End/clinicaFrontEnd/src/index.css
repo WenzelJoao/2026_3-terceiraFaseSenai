@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@layer components{
+    .cadastro_login{
+        background-color: white;
+        border-radius: 1rem;
+        text-align: center;
+    }
+}
